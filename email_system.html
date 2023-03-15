@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            font-family: 'Poppins',sans-serif;
+            font-size:20px;
+            box-sizing:border-box;
+        }
+        body{
+            padding:24px;
+        }
+        input,textarea,button{
+            margin:4px 0;
+            padding: 8px;
+        }
+    </style>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("cz1oHct2AIXv_znDq");
+})();
+</script>
+</head>
+<body>
+    <div id="myform">
+        <input class="form_input" type="text" id="fullName" placeholder="Full Name" required><br />
+        <input class="form_input" type="email" id="email_id" placeholder="Email Id" required><br />
+        <textarea class="form_input" placeholder="Message" name="" id="message" cols="30" rows="4" required></textarea><br />
+        <button onclick="sendMail()">Send</button>
+    </form>
+</body>
+</html>
+<script>
+        function sendMail(){
+            let params = {
+                from_name : document.getElementById("fullName").value,
+                email_id : document.getElementById("email_id").value,
+                message : document.getElementById("message").value
+            }
+            emailjs.send("service_1nrj1xr","template_b3dln1p",params,).then(function(res){
+                alert("message sent successfully" + res.status);
+            })
+            reset();
+        }
+        function reset(){
+         let allInput = document.getElementsByClassName("form_input");
+         for(let eachInput of allInput){
+            eachInput.value = "";
+         }
+        }
+</script>
