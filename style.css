@@ -1,0 +1,248 @@
+/* Reset css */
+html{scroll-behavior: smooth;}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-size:16px;
+    line-height:1.5;
+    font-family: 'Manrope', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+img{
+    max-width:100%;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* common css */
+.container{width:100%;max-width:1318px;margin:0 auto}
+
+/* css */
+
+h1{
+    font-size:calc(0.8rem + 1.4vw) ;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1% 0;
+    color:#0c3267;
+}
+h2{
+    text-align: center;
+    padding:4% 0;
+    color:#0c3267;
+}
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif; 
+}
+h3{
+    font-size: 1.3rem;
+}
+span.call{
+    border-bottom: 2px solid #005769;
+    font-weight:500;
+}
+.header_image{
+    width:100%;
+}
+.title{display:flex;
+gap:1%;}
+.title > h1{align-self: center;}
+.header{
+    position:relative;
+}
+.header .navigation_bar ul{
+    position:absolute;
+    top:1.5%;
+    display: flex;
+    gap:25px;
+    font-size:1.2rem;
+    flex-direction: row;
+    color:white;
+    right:9.2%;
+}
+.header .navigation_bar ul li.last_nav{
+    border-bottom: 3px solid #e6992f;
+}
+.header .description{
+    position:absolute;
+    color:white;
+    bottom:16%;
+    right:12%;
+    font-family: 'Unbounded', cursive;
+    font-size:calc(0.5rem + 2.2vw) ;
+    line-height:calc(1.rem + 3vw);
+    border-left:1px solid #e8d395;
+    padding-left:0.5%;
+}
+.header .description p.shine{color:#e8d395;}
+.header .contact{
+    width:12%;
+    color:white;
+    position:absolute;
+    background-color: #2f7ce6;
+    padding:0.5% 0;
+    right:23%;
+    bottom:6%;
+    font-family: 'Montserrat', sans-serif; 
+    font-size:calc(0.5rem + 1.4vw);
+    border-left:5px solid #e6992f;
+    text-align: center;
+}
+.header .contact p{
+    display:inline;
+    padding-right:8%;
+
+}
+.header .contact i{
+    padding-right:8%;
+  
+}
+.fixed_contact{
+    color:green;
+    font-size: calc(1.5rem + 1.2vw);
+    position: fixed;
+    top:50%;
+    right: 5%;
+}
+.fixed_contact .phone{
+margin-bottom:50%;
+}
+.about_us_bg{
+    background-color: #D5F8FF;
+}
+.about_us_header h2{
+    padding:3% 0;
+}
+.about_us{
+    display:flex;
+    gap:2%;
+    padding: 1% 10% 3%;
+}
+.about_us .text{
+    flex:1;
+}
+.about_us .text{border-left:5px solid #e6992f;padding:0.2% 1%;}
+.about_us .contact_info{
+    flex:1;
+    align-self: center;
+    padding: 0 2%;
+}
+.about_us .contact_info .connect{
+    padding:1%;
+    margin: 2% 30%;
+    color:white;
+    background-color: #2f7ce6;
+    border-left:3px solid #e6992f;
+    text-align: center;
+}
+.services ul{
+    display:flex;
+    gap:1.5%;
+    margin:0 1.5% 4%;
+}
+.services .service_parts h3{
+    text-align:center;
+}
+.home_service{
+    display:flex;
+    padding: 1% 10% 4%;
+}
+.home_service_bg{background-color: #FDEAD1;}
+.home_service .features_list{
+    flex:1;
+    align-self: center; 
+    justify-self: center;
+}
+.home_service .features_list ul li{
+    line-height: 2;
+}
+.home_service .features_list h3{
+    margin-bottom:2%;
+}
+.home_service .features_list .booking_button{
+    color:white;
+    background-color: #2f7ce6;
+    padding: 0.5%;
+    font-size:calc(0.8rem + 0.8vw);
+    margin-top:10%;
+    margin-right:50%;
+    text-align: center;
+    border-left:5px solid #e6992f;
+}
+.home_service .illustration{
+    flex: 1;
+    align-self: center;
+    justify-self: center;
+}
+.special_features{
+    display:flex;
+    gap:6%;
+    padding:1.5%;
+}
+.special_features div{
+    padding: 2%;
+    box-shadow: 0 0 10px -2px #444444;
+}
+.special_features div h3{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.gallery ul{
+    display:flex;
+    gap:3%;
+    margin:1.5%;
+}
+.gallery ul li{
+    margin-bottom:4%;
+}
+.gallery ul li img{flex:1;}
+.contact_us_bg{background-color:#D5F8FF;}
+.contact_us{
+    display:flex;
+    padding:0 10% 3%;
+}
+.contact_us > .location{flex:1; border-left:5px solid #005769; padding:0.2% 1%;}
+.contact_us > .number{flex:1; border-left:5px solid #005769; padding:0.2% 1%;line-height:2rem;}
+.contact_us > div b{font-size: 18px;}
+
+.footer{color:white;background-color: black;padding:0.2%;text-align: right;}
+
+
+
+/* for tablet */
+@media (max-width:1024px) and (min-width:768px){
+    .header .contact{width:18%;}
+    .services ul{display:grid;grid-template-columns: repeat(2, 1fr);gap:4%;margin:4%;}
+    .about_us .contact_info .connect{margin:2% 26%;}
+    .special_features{display:grid;grid-template-columns: repeat(2, 1fr);gap:3%;padding:0 3%;}
+    .special_features div{margin-bottom:4%;}
+    
+}
+
+/* for mobile */
+@media (max-width:767px) {
+.navigation_bar{display: none;}
+.header .contact{width:22%;right:18%;}
+.header .description{right:6%;line-height:1.2;}
+.about_us{flex-direction: column;}
+.about_us .contact_info{width:50%;}
+.about_us .contact_info .connect{margin: 2% 10%;}
+.services ul{flex-direction:column;gap:0;width:100%;}
+.services .service_parts .service_image{margin:0 6% 0 4%;}
+.services .service_parts .service_image img{width:100%;}
+.home_service .features_list .booking_button{margin-right:40%;}
+.special_features{flex-direction: column;}
+.special_features div{margin:0 10% 6% 10%;}
+.gallery ul{flex-direction: column;}
+.gallery ul li{margin:0 4% 3%;}
+.gallery ul li img{width:100%;}
+.contact_us{margin:0 3%; flex-direction:column;}
+.contact_us .number{margin-top:8%;}
+}
